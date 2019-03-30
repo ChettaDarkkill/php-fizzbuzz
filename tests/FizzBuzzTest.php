@@ -58,4 +58,9 @@ class FizzBuzzTest extends TestCase {
         $this->assertEquals(10, $this->object->say(10));
     }
 
+    public function testResultShouldBe11WhenEnter11()
+    {
+        $this->assertEquals(11, $this->object->say(11));
+    }
+
 }
