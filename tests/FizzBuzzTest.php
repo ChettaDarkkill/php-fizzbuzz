@@ -13,4 +13,9 @@ class FizzBuzzTest extends TestCase {
         $this->assertEquals(1, $this->object->say(1));
     }
 
+    public function testResultShouldBe2WhenEnter2()
+    {
+        $this->assertEquals(2, $this->object->say(2));
+    }
+
 }
