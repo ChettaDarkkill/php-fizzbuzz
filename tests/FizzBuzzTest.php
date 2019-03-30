@@ -43,4 +43,9 @@ class FizzBuzzTest extends TestCase {
         $this->assertEquals(7, $this->object->say(7));
     }
 
+    public function testResultShouldBe8WhenEnter8()
+    {
+        $this->assertEquals(8, $this->object->say(8));
+    }
+
 }
