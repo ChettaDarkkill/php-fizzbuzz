@@ -8,6 +8,9 @@
             if($num == 5) {
                 return "Buzz";
             }
+            if($num == 6) {
+                return "Fizz";
+            }
             return $num;
         }
     }
