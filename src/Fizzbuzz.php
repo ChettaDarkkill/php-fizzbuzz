@@ -2,17 +2,21 @@
     class FizzBuzz
     {
         public function say($num) {
-
-            if($num % 15 == 0) {
-                return "FizzBuzz";
+            $str = "";
+            $f = $num % 3;
+            while($f == 0) {
+                $str = $str."Fizz";
+                break;
             }
-            if($num % 3 == 0) {
-                return "Fizz";
+            $b = $num % 5;
+            while($b == 0) {
+                $str = $str."Buzz";
+                break;
             }
-            if($num % 5 == 0) {
-                return "Buzz";
+            while(strlen($str) == 0) {
+                return $num;
+                break;
             }
-
-            return $num;
+            return $str;
         }
     }
