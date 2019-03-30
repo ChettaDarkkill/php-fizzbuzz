@@ -18,4 +18,9 @@ class FizzBuzzTest extends TestCase {
         $this->assertEquals(2, $this->object->say(2));
     }
 
+    public function testResultShouldBeFizzWhenEnter3()
+    {
+        $this->assertEquals("Fizz", $this->object->say(3));
+    }
+
 }
