@@ -2,10 +2,10 @@
     class FizzBuzz
     {
         public function say($num) {
-            return $this->fizz($num).$this->buzz($num).$this->word($num);
+            return $this->fizz($num).$this->buzz($num).$this->number($num);
         }
 
-        public function word($num){
+        public function number($num){
             $word = [true => "", false => $num];
             return $word[$this->isFizz($num) || $this->isBuzz($num)];
         }
