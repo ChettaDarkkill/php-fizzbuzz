@@ -2,23 +2,29 @@
     class FizzBuzz
     {
         public function say($num) {
-            $arr = [
-                0 => $num,
-                4 => "Fizz",
-                5 => "Buzz",
-                9 => "FizzBuzz",
-            ];
+            return $this->fizz($num).$this->buzz($num).$this->word($num);
+        }
 
-            $f1 = $num % 3;
-            $b1 = $num % 5;
+        public function word($num){
+            $word = [true => "", false => $num];
+            return $word[$this->isFizz($num) || $this->isBuzz($num)];
+        }
 
-            $f2 = str_replace(0, "Fizz", $f1);
-            $b2 = str_replace(0, "Buzzz", $b1);
+        public function buzz($num) {
+            $word = [true => "Buzz", false => ""];
+            return $word[$this->isBuzz($num)];
+        }
 
-            $fb1 =  $f2.$b2;
+        public function isBuzz($num) {
+            return $num % 5 == 0;
+        }
 
-            $fb = str_replace($f1, "", $fb1);
-            $fb = str_replace($b1, "", $fb);
-            return $arr[strlen($fb)];
+        public function fizz($num) {
+            $word = [true => "Fizz", false => ""];
+            return $word[$this->isFizz($num)];
+        }
+
+        public function isFizz($num) {
+            return $num % 3 == 0;
         }
     }
